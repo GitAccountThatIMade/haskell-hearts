@@ -1,0 +1,13 @@
+image: haskell
+variables:
+    STACK_ROOT: /builds/.stack
+
+build:
+    script:
+        - stack build
+        - stack test
+    cache:
+        paths:
+            - /builds/.stack
+            - .stack-work
+            - /root/.local/
